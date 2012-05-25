@@ -175,4 +175,4 @@ if 'south' in settings.INSTALLED_APPS:
             },
         ),
     ]
-    add_introspection_rules(rules, ['^ccpages\.fields',])
+    add_introspection_rules(rules, ['^ccthumbs\.fields',])

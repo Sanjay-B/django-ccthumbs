@@ -21,8 +21,7 @@ The code is hosted on github and issues and bugs can be reported there as well.
 
 
 
-* :ref:`search`
-
+* :ref:`genindex`
 
 .. _`django-thumbs`: http://djangothumbnails.com/
 .. _`ccthumbs`: https://github.com/designcc/django-ccthumbs

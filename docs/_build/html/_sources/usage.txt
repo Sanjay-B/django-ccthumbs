@@ -6,7 +6,7 @@ Model Setup
 -----------------------------
 
 Import the field inside your models.py and assign it to an attribute just like
-you would with a normal django file. ::
+you would with any other django model. ::
 
     
     from ccthumbs.fields import ImageWithThumbsField

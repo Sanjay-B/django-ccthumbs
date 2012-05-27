@@ -3,20 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ccthumbs's documentation!
+ccthumbs
 ====================================
 
-Contents:
+`ccthumbs`_ is adapted from `django-thumbs`_  and provides a custom model field
+that generates thumbnails based on pre-defined sizes.
+
+The code is hosted on github and issues and bugs can be reported there as well.
+
 
 .. toctree::
    :maxdepth: 2
 
+   installation
+   usage
+   
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
+
+.. _`django-thumbs`: http://djangothumbnails.com/
+.. _`ccthumbs`: https://github.com/designcc/django-ccthumbs

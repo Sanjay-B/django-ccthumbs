@@ -50,6 +50,47 @@
             
   <div class="section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setting-up-your-models">
+<h2>Setting up your models<a class="headerlink" href="#setting-up-your-models" title="Permalink to this headline">¶</a></h2>
+<p>Import the field inside your models.py and assign it to an attribute just like
+you would with a normal django file.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ccthumbs.fields</span> <span class="kn">import</span> <span class="n">ImageWithThumbsField</span>
+
+<span class="n">CCTHUMBS_SIZES</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">960</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">SomeModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">ImageWithThumbsField</span><span class="p">(</span>
+                <span class="n">upload_to</span><span class="o">=</span><span class="s">&#39;somemodel/%Y/%m/</span><span class="si">%d</span><span class="s">&#39;</span><span class="p">,</span>
+                <span class="n">sizes</span><span class="o">=</span><span class="n">CCTHUMBS_SIZES</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-the-various-images-from-the-model">
+<h2>Accessing the various images from the model<a class="headerlink" href="#accessing-the-various-images-from-the-model" title="Permalink to this headline">¶</a></h2>
+<p>You access the various image sizes from a method on the model field. In the
+above example we defined three sizes :</p>
+<ul class="simple">
+<li>200 x 200</li>
+<li>640 x 480</li>
+<li>1200 x 960</li>
+</ul>
+<p>You would be able to access those images from an instance of <tt class="docutils literal"><span class="pre">SomeModel</span></tt>
+using the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">my_somemodel_instance</span><span class="o">.</span><span class="n">img</span><span class="o">.</span><span class="n">url_200x200</span><span class="p">()</span>
+<span class="n">my_somemodel_instance</span><span class="o">.</span><span class="n">img</span><span class="o">.</span><span class="n">url_640x960</span><span class="p">()</span>
+<span class="n">my_somemodel_instance</span><span class="o">.</span><span class="n">img</span><span class="o">.</span><span class="n">url_1200x960</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you&#8217;re access the images in a template you should omit the</p>
+</div>
+<p>parenthesis.</p>
+</div>
 </div>
 
 
@@ -58,6 +99,15 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#setting-up-your-models">Setting up your models</a></li>
+<li><a class="reference internal" href="#accessing-the-various-images-from-the-model">Accessing the various images from the model</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="installation.html"
                         title="previous chapter">Installation</a></p>

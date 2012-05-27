@@ -41,5 +41,4 @@ using the following::
     my_somemodel_instance.img.url_1200x960()
 
 
-.. note :: If you're access the images in a template you should omit the
-parenthesis.
+.. note :: If you're access the images in a template you should omit the parenthesis.

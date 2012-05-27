@@ -2,7 +2,7 @@ Usage
 ===================================
 
 
-Setting up your models
+Model Setup
 -----------------------------
 
 Import the field inside your models.py and assign it to an attribute just like
@@ -23,7 +23,7 @@ you would with a normal django file. ::
                     sizes=CCTHUMBS_SIZES)
 
 
-Accessing the various images from the model
+Accessing Images
 ---------------------------------------------------
 
 You access the various image sizes from a method on the model field. In the

@@ -38,4 +38,4 @@ ccthumbs is released under a `3 clause BSD license.`_
 .. _`3 clause BSD license.`: http://www.opensource.org/licenses/bsd-3-clause
 .. _`PIL`: http://www.pythonware.com/products/pil/
 .. _`Django`: https://www.djangoproject.com/
-.. _`documentation`: http://readthedocs.org/docs/django-ccnews/en/latest/
+.. _`documentation`: http://readthedocs.org/docs/django-ccthumbs/en/latest/

@@ -19,7 +19,7 @@ Install via pip::
    pip install django-ccthumbs
 
 
-Refer to the `documentation` for usage examples.
+Refer to the `documentation`_ for usage examples.
 
 
 

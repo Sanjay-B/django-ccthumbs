@@ -14,6 +14,6 @@ setup(
         'ccthumbs',
         ],
     install_requires = [
-        'PIL',
+        'pillow',
         ])
 
